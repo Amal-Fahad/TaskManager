@@ -2,6 +2,7 @@
   "name": "task-manager-project",
   "version": "0.1.0",
   "private": true,
+  "homepage":"http://Amal-Fahad.github.io/TaskManager",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
