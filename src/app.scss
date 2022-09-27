@@ -1,0 +1,123 @@
+$background: #1d1d20;
+$foreground: #3d3d3f;
+$content_bg: #313133;
+$border: #56555a;
+$text: #fefefe;
+$red: #f34b59;
+$green: #4fae77;
+$yellow: #debc41;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  color: $text;
+  min-height: 100vh;
+  font-family: sans-serif;
+  padding: 0px 20px;
+}
+.pending {
+  background: $red;
+}
+.ongoing {
+  background: $yellow;
+}
+.completed {
+  background: $green;
+}
+.App {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.appHeader {
+  padding: 30px 0px;
+}
+
+.appMain {
+  flex: 1;
+  border: 1px solid #333;
+  background: $background;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.taskBoard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.taskColumn {
+  background: $foreground;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border;
+  h2 {
+    font-weight: 500;
+  }
+  .taskCount {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.taskList {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 20px 0px;
+  .taskItem {
+    background: $content_bg;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+    .itemHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      h3 {
+        font-weight: 400;
+      }
+      .taskMover {
+        background: $border;
+        padding: 5px 10px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+        :hover {
+          transform: scale(1.2);
+          transition: ease 0.5s;
+        }
+      }
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+.appFooter {
+  padding: 20px 0px;
+  text-align: center;
+}

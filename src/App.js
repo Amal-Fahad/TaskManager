@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.scss";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
+import Footer from "./Components/Footer";
+import TaskBoard from "./Components/TeskBoard";
+import TaskColumn from "./Components/TaskColumn";
+import { TaskDataContext } from "./Contexts/TaskContext";
+import { useReducer } from "react";
+import { initial_State } from "./Contexts/TaskReducer";
+import { reducer } from "./Contexts/TaskReducer";
 
-function App() {
+export default function App() {
+  const [state, dispatch] = useReducer(reducer, initial_State);
+
+  console.log("state is ", state);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TaskDataContext.Provider value={{ state, dispatch }}>
+      <div className="App">
+        <Header />
+        <Main>
+          <TaskBoard>
+            {Object.entries(state.data).map(([status, data], index) => {
+              return <TaskColumn key={status} index={index} itemData={data} />;
+            })}
+          </TaskBoard>
+        </Main>
+        <Footer />
+      </div>
+    </TaskDataContext.Provider>
   );
 }
-
-export default App;

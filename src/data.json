@@ -1,0 +1,54 @@
+{
+    "pending": [
+      {
+        "id": 2000,
+        "title": "Layout Design",
+        "description": "Duis aute irure dolor in reprehenderit in voluptate velit"
+      },
+      {
+        "id": 2001,
+        "title": "Header Design",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+      },
+      {
+        "id": 2002,
+        "title": "Wire Framing",
+        "description": "Duis quis nostrud dolor in reprehenderit in voluptate velit"
+      }
+    ],
+    "ongoing": [
+      {
+        "id": 2005,
+        "title": "UX Research",
+        "description": "Duis aute irure dolor in reprehenderit in voluptate velit"
+      },
+      {
+        "id": 2007,
+        "title": "IDE Config ",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+      },
+      {
+        "id": 2010,
+        "title": "SVG import",
+        "description": "Duis quis nostrud dolor in reprehenderit in voluptate velit"
+      }
+    ],
+    "completed": [
+      {
+        "id": 2015,
+        "title": "Prototyping",
+        "description": "Duis aute irure dolor in reprehenderit in voluptate velit"
+      },
+      {
+        "id": 2017,
+        "title": "Live demo",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+      },
+      {
+        "id": 2018,
+        "title": "Client Meet",
+        "description": "Duis quis nostrud dolor in reprehenderit in voluptate velit"
+      }
+    ]
+  }
+  
