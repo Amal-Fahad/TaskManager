@@ -1,10 +1,8 @@
 import React from "react";
-import { useTaskContext } from "../hooks/useTaskContext";
+import { useSelector } from "react-redux";
 
 function TaskItem({ title, id, index, description, taskMoveHandler }) {
-  const {
-    state: { statusArray },
-  } = useTaskContext();
+  const { statusArray } = useSelector((state) => state.Task);
 
   console.log("statusArray", statusArray);
 

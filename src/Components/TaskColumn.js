@@ -1,19 +1,16 @@
 import React from "react";
 import TaskHeader from "./TaskHeader";
 import TaskItem from "./TaskItem";
-import { useTaskContext } from "../hooks/useTaskContext";
+import { useSelector, useDispatch } from "react-redux";
+import { taskMove } from "../Redux/Slice/TaskSlice";
 
 function TaskColumn({ index, itemData }) {
-  const {
-    state: { statusArray },
-    dispatch,
-  } = useTaskContext();
+  const { statusArray } = useSelector((state) => state.Task);
+
+  const dispatch = useDispatch();
 
   const taskMoveHandler = (_id, _index) => {
-    dispatch({
-      type: "TASKMOVE",
-      payload: { _id, _index },
-    });
+    dispatch(taskMove({ _id, _index }));
   };
 
   return (
